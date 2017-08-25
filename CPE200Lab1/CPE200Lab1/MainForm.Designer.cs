@@ -30,11 +30,9 @@
         {
             this.btn7 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
-            this.btn9 = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -72,17 +70,6 @@
             this.btn8.UseVisualStyleBackColor = true;
             this.btn8.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // btn9
-            // 
-            this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(200, 218);
-            this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(88, 64);
-            this.btn9.TabIndex = 2;
-            this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = true;
-            this.btn9.Click += new System.EventHandler(this.btnNumber_Click);
-            // 
             // btnMultiply
             // 
             this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,17 +102,6 @@
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
             this.btn6.Click += new System.EventHandler(this.btnNumber_Click);
-            // 
-            // btn5
-            // 
-            this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(106, 288);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(88, 64);
-            this.btn5.TabIndex = 5;
-            this.btn5.Text = "5";
-            this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn4
             // 
@@ -291,10 +267,8 @@
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn4);
             this.Controls.Add(this.btnMultiply);
-            this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
             this.Name = "MainForm";
@@ -308,11 +282,9 @@
 
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btn8;
-        private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.Button btn3;
