@@ -19,6 +19,7 @@ namespace CPE200Lab1
         private string firstOperand;
         private string operate;
         private CalculatorEngine engine;
+        private bool symbolcheck;
 
         private void resetAll()
         {
@@ -32,11 +33,11 @@ namespace CPE200Lab1
         public MainForm()
         {
             InitializeComponent();
-
+            
             resetAll();
         }
 
-        private void btnNumber_Click(object sender, EventArgs e)
+        private void btnNumber_Click(object sender, EventArgs e)//Num
         {
             if (lblDisplay.Text is "Error")
             {
@@ -74,20 +75,41 @@ namespace CPE200Lab1
             {
                 return;
             }
-            operate = ((Button)sender).Text;
-            switch (operate)
+            if (symbolcheck == false)
             {
-                case "+":
-                case "-":
-                case "X":
-                case "÷":
-                    firstOperand = lblDisplay.Text;
-                    isAfterOperater = true;
-                    break;
-                case "%":
-                    // your code here
-                    break;
+                operate = ((Button)sender).Text;
+                switch (operate)
+                {
+                    case "+":
+                    case "-":
+                    case "X":
+                    case "÷":
+                        firstOperand = lblDisplay.Text;
+                        isAfterOperater = true;
+                        break;
+                    case "%":
+                        // your code here
+                        break;
+                }
             }
+            else if(symbolcheck)
+            {
+                btnEqual_Click(sender, e);
+                operate = ((Button)sender).Text;
+                switch (operate)
+                {
+                    case "+":
+                    case "-":
+                    case "X":
+                    case "÷":
+                        firstOperand = lblDisplay.Text;
+                        isAfterOperater = true;
+                        break;
+                    case "%":
+                        // your code here
+                        break;
+                }
+}
             isAllowBack = false;
         }
 
@@ -131,7 +153,7 @@ namespace CPE200Lab1
             }
         }
 
-        private void btnSign_Click(object sender, EventArgs e)
+        private void btnSign_Click(object sender, EventArgs e)//บวกลบ
         {
             if (lblDisplay.Text is "Error")
             {
@@ -160,7 +182,7 @@ namespace CPE200Lab1
             resetAll();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)//กลับ
         {
             if (lblDisplay.Text is "Error")
             {
