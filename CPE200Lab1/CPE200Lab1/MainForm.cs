@@ -33,7 +33,7 @@ namespace CPE200Lab1
         public MainForm()
         {
             InitializeComponent();
-            
+            engine = new CalculatorEngine();
             resetAll();
         }
 
@@ -91,8 +91,9 @@ namespace CPE200Lab1
                         // your code here
                         break;
                 }
+                symbolcheck = true;
             }
-            else if(symbolcheck)
+            else if(symbolcheck==true)
             {
                 btnEqual_Click(sender, e);
                 operate = ((Button)sender).Text;
