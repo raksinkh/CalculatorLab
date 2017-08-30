@@ -19,7 +19,7 @@ namespace CPE200Lab1
         private string firstOperand;
         private string operate;
         private CalculatorEngine engine;
-        private bool symbolcheck;
+        private bool symbolcheck=false;
 
         private void resetAll()
         {
@@ -28,6 +28,7 @@ namespace CPE200Lab1
             hasDot = false;
             isAfterOperater = false;
             isAfterEqual = false;
+            symbolcheck = false;
         }
 
         public MainForm()
@@ -88,27 +89,37 @@ namespace CPE200Lab1
                         isAfterOperater = true;
                         break;
                     case "%":
-                        // your code here
+                        symbolcheck = false;
                         break;
                 }
                 symbolcheck = true;
             }
             else if(symbolcheck==true)
             {
-                btnEqual_Click(sender, e);
+                double x, y;
+                x = double.Parse(firstOperand);
+                y = double.Parse(lblDisplay.Text);
                 operate = ((Button)sender).Text;
-                switch (operate)
+                if(operate == "%")
                 {
-                    case "+":
-                    case "-":
-                    case "X":
-                    case "÷":
-                        firstOperand = lblDisplay.Text;
-                        isAfterOperater = true;
-                        break;
-                    case "%":
-                        // your code here
-                        break;
+                    
+                }
+                else
+                {
+                    btnEqual_Click(sender, e);
+                    switch (operate)
+                    {
+                        case "+":
+                        case "-":
+                        case "X":
+                        case "÷":
+                            firstOperand = lblDisplay.Text;
+                            isAfterOperater = true;
+                            break;
+                            //case "%":
+                            // your code here
+                            //break;
+                    }
                 }
 }
             isAllowBack = false;
@@ -181,6 +192,8 @@ namespace CPE200Lab1
         private void btnClear_Click(object sender, EventArgs e)
         {
             resetAll();
+            firstOperand = string.Empty;
+            operate = string.Empty;
         }
 
         private void btnBack_Click(object sender, EventArgs e)//กลับ
