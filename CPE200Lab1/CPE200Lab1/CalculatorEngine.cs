@@ -10,6 +10,8 @@ namespace CPE200Lab1
     {
         public string calculate(string operate, string firstOperand, string secondOperand, int maxOutputSize = 8)
         {
+            string percen;
+            string resultpercen;
             switch (operate)
             {
                 case "+":
@@ -40,8 +42,13 @@ namespace CPE200Lab1
                         return result.ToString("N" + remainLength);
                     }
                     break;
-                case "%":
-                    return (Convert.ToDouble(firstOperand) * Convert.ToDouble(secondOperand)/100).ToString();
+               // case "%":
+                    //return (Convert.ToDouble(firstOperand) * Convert.ToDouble(secondOperand)/100).ToString();
+                    
+                    
+                    //resultpercen = calculate(operate, firstOperand, percen);
+                    //return resultpercen;
+
                     break;
             }
             return "E";
