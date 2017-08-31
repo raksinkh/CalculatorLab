@@ -49,7 +49,7 @@ namespace CPE200Lab1
                     //resultpercen = calculate(operate, firstOperand, percen);
                     //return resultpercen;
 
-                    break;
+                    //break;
             }
             return "E";
         }

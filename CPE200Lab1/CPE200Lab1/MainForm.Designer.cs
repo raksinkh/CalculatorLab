@@ -49,6 +49,8 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblDisplay = new System.Windows.Forms.Label();
+            this.squarRoot = new System.Windows.Forms.Button();
+            this.Convert = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -285,11 +287,35 @@
             this.lblDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblDisplay.Click += new System.EventHandler(this.lblDisplay_Click);
             // 
+            // squarRoot
+            // 
+            this.squarRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.squarRoot.Location = new System.Drawing.Point(388, 148);
+            this.squarRoot.Name = "squarRoot";
+            this.squarRoot.Size = new System.Drawing.Size(88, 64);
+            this.squarRoot.TabIndex = 21;
+            this.squarRoot.Text = "√";
+            this.squarRoot.UseVisualStyleBackColor = true;
+            this.squarRoot.Click += new System.EventHandler(this.squarRoot_Click);
+            // 
+            // Convert
+            // 
+            this.Convert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Convert.Location = new System.Drawing.Point(388, 218);
+            this.Convert.Name = "Convert";
+            this.Convert.Size = new System.Drawing.Size(88, 64);
+            this.Convert.TabIndex = 22;
+            this.Convert.Text = "1/x";
+            this.Convert.UseVisualStyleBackColor = true;
+            this.Convert.Click += new System.EventHandler(this.Convert_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 508);
+            this.ClientSize = new System.Drawing.Size(486, 508);
+            this.Controls.Add(this.Convert);
+            this.Controls.Add(this.squarRoot);
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
@@ -341,6 +367,8 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Button squarRoot;
+        private System.Windows.Forms.Button Convert;
     }
 }
 

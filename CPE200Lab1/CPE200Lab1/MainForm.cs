@@ -267,9 +267,33 @@ namespace CPE200Lab1
             }
         }
 
-        private void lblDisplay_Click(object sender, EventArgs e)
+        public void lblDisplay_Click(object sender, EventArgs e)
         {
+            
+        }
 
+
+        private void squarRoot_Click(object sender, EventArgs e)
+        {
+            string square;
+            double squareRoot;
+            square = lblDisplay.Text;
+            squareRoot = Math.Sqrt(Convert.ToDouble(square));
+            lblDisplay.Text = squareRoot.ToString();
+        }
+
+        private void Convert_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text is "Error")
+            {
+                return;
+            }
+            string con ;
+            double convert;
+            con = lblDisplay.Text;
+            convert = 1/ Convert.ToDouble(con);
+            lblDisplay.Text = convert.ToString();
+            
         }
     }
 }
