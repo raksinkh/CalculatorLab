@@ -267,14 +267,16 @@
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(106, 237);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(88, 64);
-            this.btnBack.TabIndex = 19;
-            this.btnBack.Text = "<";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            /*
+            this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBack.Location = new System.Drawing.Point(106, 237);
+            this.BtnBack.Name = "btnBack";
+            this.BtnBack.Size = new System.Drawing.Size(88, 64);
+            this.BtnBack.TabIndex = 19;
+            this.BtnBack.Text = "<";
+            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.btnBack_Click);
+            */
             // 
             // lblDisplay
             // 
@@ -421,6 +423,9 @@
         private System.Windows.Forms.Button btnMM;
         private System.Windows.Forms.Button btnSqr;
         private System.Windows.Forms.Button btnOox;
+        private object btnBack;
+
+        public object BtnBack { get => btnBack; set => btnBack = value; }
     }
 }
 
