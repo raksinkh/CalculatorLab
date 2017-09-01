@@ -102,7 +102,7 @@ namespace CPE200Lab1
             isAfterOperater = false;
         }
 
-        private void btnOperator_Click(object sender, EventArgs e)
+        private void btnOperator_Click(object sender, EventArgs e)//symbol
         {
             if (lblDisplay.Text is "Error")
             {

@@ -232,6 +232,7 @@
             this.Controls.Add(this.btn4);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btn8);
+            this.Controls.Add(this.btn7);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
