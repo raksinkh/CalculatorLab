@@ -10,8 +10,7 @@ namespace CPE200Lab1
     {
         public string calculate(string operate, string firstOperand, string secondOperand, int maxOutputSize = 8)
         {
-            string percen;
-            string resultpercen;
+
             switch (operate)
             {
                 case "+":

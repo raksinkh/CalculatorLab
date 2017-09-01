@@ -21,7 +21,8 @@ namespace CPE200Lab1
         private CalculatorEngine engine;
         private bool symbolcheck=false;
         private string symbol;
-       // private string num;
+        private string remember;
+        // private string num;
 
         private void resetAll()
         {
@@ -151,11 +152,7 @@ namespace CPE200Lab1
                             case "÷":
                                 firstOperand = lblDisplay.Text;
                                 isAfterOperater = true;
-                                break;
-                                //case "%":
-                                // your code here
-                                // break;
-
+                                break;                            
                         }
                     }
                 }
@@ -299,13 +296,38 @@ namespace CPE200Lab1
         {
             
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void memmory_Click(object sender, EventArgs e)
         {
+            
+            string memoryOperate = ((Button)sender).Text;
+            switch (memoryOperate)
+            {
+                case "MC":
+                    remember = "0";
+                    lblDisplay.Text = "0";
+                    label1.Text = remember;
+                    break;
+                case "MR":
+                    lblDisplay.Text = remember;
+                    break;
+                case "MS":
+                    remember = lblDisplay.Text;
+                    label1.Text = remember;
+                    break;
+                case "M+":
+                    if (remember == "0") remember = lblDisplay.Text;
+                    remember = (Convert.ToDouble(remember) + Convert.ToDouble(lblDisplay.Text)).ToString();
+                    label1.Text = remember;
+                    break;
+                case "M-":
+                    remember = (Convert.ToDouble(remember) - Convert.ToDouble(lblDisplay.Text)).ToString();
+                    label1.Text = remember;
+                    break;
 
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

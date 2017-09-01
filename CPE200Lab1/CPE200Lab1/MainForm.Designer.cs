@@ -55,6 +55,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.MR = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.MS = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn7
@@ -192,9 +194,9 @@
             // btnEqual
             // 
             this.btnEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEqual.Location = new System.Drawing.Point(391, 54);
+            this.btnEqual.Location = new System.Drawing.Point(391, 218);
             this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(88, 82);
+            this.btnEqual.Size = new System.Drawing.Size(88, 274);
             this.btnEqual.TabIndex = 15;
             this.btnEqual.Text = "=";
             this.btnEqual.UseVisualStyleBackColor = true;
@@ -279,13 +281,12 @@
             // 
             // lblDisplay
             // 
-            this.lblDisplay.AutoSize = true;
             this.lblDisplay.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplay.Location = new System.Drawing.Point(12, 54);
+            this.lblDisplay.Location = new System.Drawing.Point(12, 51);
             this.lblDisplay.MinimumSize = new System.Drawing.Size(365, 0);
             this.lblDisplay.Name = "lblDisplay";
-            this.lblDisplay.Size = new System.Drawing.Size(365, 82);
+            this.lblDisplay.Size = new System.Drawing.Size(561, 82);
             this.lblDisplay.TabIndex = 20;
             this.lblDisplay.Text = "0";
             this.lblDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -316,50 +317,77 @@
             // MC
             // 
             this.MC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MC.Location = new System.Drawing.Point(391, 218);
+            this.MC.Location = new System.Drawing.Point(485, 148);
             this.MC.Name = "MC";
             this.MC.Size = new System.Drawing.Size(88, 64);
             this.MC.TabIndex = 23;
             this.MC.Text = "MC";
             this.MC.UseVisualStyleBackColor = true;
+            this.MC.Click += new System.EventHandler(this.memmory_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(391, 428);
+            this.button2.Location = new System.Drawing.Point(485, 358);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 64);
             this.button2.TabIndex = 24;
             this.button2.Text = "M-";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.memmory_Click);
             // 
             // MR
             // 
             this.MR.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MR.Location = new System.Drawing.Point(391, 288);
+            this.MR.Location = new System.Drawing.Point(485, 218);
             this.MR.Name = "MR";
             this.MR.Size = new System.Drawing.Size(88, 64);
             this.MR.TabIndex = 25;
             this.MR.Text = "MR";
             this.MR.UseVisualStyleBackColor = true;
+            this.MR.Click += new System.EventHandler(this.memmory_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(388, 358);
+            this.button4.Location = new System.Drawing.Point(485, 288);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 64);
             this.button4.TabIndex = 26;
             this.button4.Text = "M+";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.memmory_Click);
+            // 
+            // MS
+            // 
+            this.MS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MS.Location = new System.Drawing.Point(485, 428);
+            this.MS.Name = "MS";
+            this.MS.Size = new System.Drawing.Size(88, 64);
+            this.MS.TabIndex = 27;
+            this.MS.Text = "MS";
+            this.MS.UseVisualStyleBackColor = true;
+            this.MS.Click += new System.EventHandler(this.memmory_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.MinimumSize = new System.Drawing.Size(365, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(370, 29);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "0";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 508);
+            this.ClientSize = new System.Drawing.Size(591, 508);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.MS);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.MR);
             this.Controls.Add(this.button2);
@@ -390,7 +418,6 @@
             this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -423,6 +450,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button MR;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button MS;
+        private System.Windows.Forms.Label label1;
     }
 }
 
