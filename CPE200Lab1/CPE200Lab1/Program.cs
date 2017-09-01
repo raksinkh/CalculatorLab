@@ -10,7 +10,7 @@ namespace CPE200Lab1
     {
         /// <summary>
         /// The main entry point for the application.
-        /// </summary>
+        /// </summary>awefawefewf
         [STAThread]
         static void Main()
         {
