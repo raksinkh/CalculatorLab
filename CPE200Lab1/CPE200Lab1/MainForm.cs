@@ -116,6 +116,7 @@ namespace CPE200Lab1
                     lblDisplay.Text = result;
                 }
             }
+            
             operate = ((Button)sender).Text;
             switch (operate)
             {
