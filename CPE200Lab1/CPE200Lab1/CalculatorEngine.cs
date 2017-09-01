@@ -48,9 +48,9 @@ namespace CPE200Lab1
                         int remainLength;
 
                         result = Math.Sqrt(Convert.ToDouble(operand));
-                        // split between integer part and fractional part
+                        // split between integer part and fractional partsdfdsf sfs
                         parts = result.ToString().Split('.');
-                        // if integer part length is already break max output, return error
+                        // if integer part length is already break max output, return error sdfsdfsdfsdf sdf
                         if (parts[0].Length > maxOutputSize)
                         {
                             return "E";
