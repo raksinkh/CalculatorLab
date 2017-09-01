@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn7 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
@@ -43,20 +42,8 @@
             this.btn0 = new System.Windows.Forms.Button();
             this.btnSign = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.lblDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btn7
-            // 
-            this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(12, 218);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(88, 64);
-            this.btn7.TabIndex = 0;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btn8
             // 
@@ -212,17 +199,6 @@
             this.btnDivide.UseVisualStyleBackColor = true;
             this.btnDivide.Click += new System.EventHandler(this.btnOperator_Click);
             // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(12, 148);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(88, 64);
-            this.btnClear.TabIndex = 18;
-            this.btnClear.Text = "C";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // lblDisplay
             // 
             this.lblDisplay.AutoSize = true;
@@ -242,7 +218,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 508);
             this.Controls.Add(this.lblDisplay);
-            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnEqual);
             this.Controls.Add(this.btnDot);
@@ -257,7 +232,6 @@
             this.Controls.Add(this.btn4);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn7);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -266,8 +240,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnMinus;
@@ -282,7 +254,6 @@
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnSign;
         private System.Windows.Forms.Button btnDivide;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblDisplay;
     }
 }
