@@ -59,6 +59,8 @@ namespace CPE200Lab1
             {
                 return;
             }
+
+            //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++FEED THE TROLLS +++++++++++++++++++++++++++++++++++++++++++++++++++//
             isAllowBack = true;
             string digit = ((Button)sender).Text;
             if(lblDisplay.Text is "0")
@@ -67,6 +69,7 @@ namespace CPE200Lab1
             }
             lblDisplay.Text += digit;
             isAfterOperater = false;
+            //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ TROLLS is FED +++++++++++++++++++++++++++++++++++++++++++++++++++//
         }
 
         private void btnUnaryOperator_Click(object sender, EventArgs e)
@@ -265,5 +268,7 @@ namespace CPE200Lab1
             }
             lblDisplay.Text = memory.ToString();
         }
+
+        
     }
 }
