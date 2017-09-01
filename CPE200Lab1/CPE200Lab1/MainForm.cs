@@ -21,6 +21,7 @@ namespace CPE200Lab1
         private CalculatorEngine engine;
         private bool symbolcheck=false;
         private string symbol;
+       // private string num;
 
         private void resetAll()
         {
@@ -85,18 +86,46 @@ namespace CPE200Lab1
                 switch (operate)
                 {
                     case "+":
+
                     case "-":
+                        
                     case "X":
+                        
                     case "÷":
                         firstOperand = lblDisplay.Text;
                         isAfterOperater = true;
                         break;
                     //case "%":
-                       // break;
+                    // break;
+                    case "√":
+                        string square;
+                        double squareRoot;
+                        square = lblDisplay.Text;
+                        string root;
+                        squareRoot =System.Math.Sqrt(Convert.ToDouble(square));
+                        lblDisplay.Text = squareRoot.ToString();
+                        symbolcheck = true;
+                        break;
+                    case "1/x":
+                        if (lblDisplay.Text is "Error")
+                        {
+                            return;
+                        }
+                        string con;
+                        double convert;
+                        con = lblDisplay.Text;
+                        convert = 1 / Convert.ToDouble(con);
+                        lblDisplay.Text = convert.ToString();
+                        break;
+                    case "%":
+                        return;
+                        
+                        
+
                 }
                 symbol = operate;
-                
                 symbolcheck = true;
+
             }
             else if(symbolcheck==true)
             {
@@ -106,14 +135,13 @@ namespace CPE200Lab1
                     string second;
                     double x;
                     second = lblDisplay.Text;
-                    x = (Convert.ToDouble(firstOperand) * (Convert.ToDouble(second) / 100));
+                    x = (Convert.ToDouble(firstOperand) * (Convert.ToDouble(second) / 100)); 
                     lblDisplay.Text = x.ToString();
                 }
                 else
                 {
                     btnEqual_Click(sender, e);
                     isAfterEqual = false;
-                    
                     {
                         switch (operate)
                         {
@@ -272,28 +300,14 @@ namespace CPE200Lab1
             
         }
 
-
-        private void squarRoot_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            string square;
-            double squareRoot;
-            square = lblDisplay.Text;
-            squareRoot = Math.Sqrt(Convert.ToDouble(square));
-            lblDisplay.Text = squareRoot.ToString();
+
         }
 
-        private void Convert_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            if (lblDisplay.Text is "Error")
-            {
-                return;
-            }
-            string con ;
-            double convert;
-            con = lblDisplay.Text;
-            convert = 1/ Convert.ToDouble(con);
-            lblDisplay.Text = convert.ToString();
-            
+
         }
     }
 }

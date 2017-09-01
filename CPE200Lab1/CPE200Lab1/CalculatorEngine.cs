@@ -15,7 +15,7 @@ namespace CPE200Lab1
             switch (operate)
             {
                 case "+":
-                    return (Convert.ToDouble(firstOperand) + Convert.ToDouble(secondOperand)).ToString();
+                    return (Convert.ToDouble(firstOperand) + Convert.ToDouble(secondOperand)).ToString(); 
                 case "-":
                     return (Convert.ToDouble(firstOperand) - Convert.ToDouble(secondOperand)).ToString();
                 case "X":
