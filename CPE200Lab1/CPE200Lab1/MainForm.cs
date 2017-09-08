@@ -17,8 +17,10 @@ namespace CPE200Lab1
         private bool isAfterOperater;
         private bool isAfterEqual;
         private string firstOperand;
+        private string operatekeep;
         private string operate;
         private double memory;
+        private bool isPercen;
         private CalculatorEngine engine;
 
         private void resetAll()
@@ -29,7 +31,9 @@ namespace CPE200Lab1
             isAfterOperater = false;
             isAfterEqual = false;
             firstOperand = null;
-        }
+            operatekeep = null;
+            isPercen = null;
+    }
 
       
 
@@ -39,6 +43,7 @@ namespace CPE200Lab1
             memory = 0;
             engine = new CalculatorEngine();
             resetAll();
+            
         }
 
         private void btnNumber_Click(object sender, EventArgs e)
@@ -125,9 +130,15 @@ namespace CPE200Lab1
                 case "÷":
                     firstOperand = lblDisplay.Text;
                     isAfterOperater = true;
+                    operatekeep = operate;
                     break;
                 case "%":
-                    // your code here
+                    string secreat1 = lblDisplay.Text;
+                    string secreat2 = firstOperand
+                    engine.calculate("/", firstOperand, secreat1);
+                    // (Convert.ToDouble(firstOperand) * (Convert.ToDouble(secreat1) / 100)).ToString();
+                    lblDisplay.Text = secreat2;                        
+                    operate = operatekeep;
                     break;
             }
             isAllowBack = false;
@@ -264,6 +275,11 @@ namespace CPE200Lab1
                 return;
             }
             lblDisplay.Text = memory.ToString();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
