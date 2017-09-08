@@ -20,7 +20,7 @@ namespace CPE200Lab1
         private string operatekeep;
         private string operate;
         private double memory;
-        private bool isPercen;
+        //private bool isPercen;
         private CalculatorEngine engine;
 
         private void resetAll()
@@ -32,7 +32,7 @@ namespace CPE200Lab1
             isAfterEqual = false;
             firstOperand = null;
             operatekeep = null;
-            isPercen = null;
+            //isPercen = false;
     }
 
       
@@ -133,11 +133,15 @@ namespace CPE200Lab1
                     operatekeep = operate;
                     break;
                 case "%":
-                    string secreat1 = lblDisplay.Text;
-                    string secreat2 = firstOperand
-                    engine.calculate("/", firstOperand, secreat1);
+                    //isPercen = true;
+                    double secreat1 = Convert.ToDouble(lblDisplay.Text)- Convert.ToDouble(firstOperand);
+                    double secreat2 = Convert.ToDouble(firstOperand);
+                    double repercen = (secreat2 / 100) * secreat1;
+                   // double repercen = secreat1;
+                    //string percen = engine.calculate("/", secreat2, secreat1);
+                    lblDisplay.Text = repercen.ToString();
                     // (Convert.ToDouble(firstOperand) * (Convert.ToDouble(secreat1) / 100)).ToString();
-                    lblDisplay.Text = secreat2;                        
+                    //lblDisplay.Text = secreat2;                        
                     operate = operatekeep;
                     break;
             }
