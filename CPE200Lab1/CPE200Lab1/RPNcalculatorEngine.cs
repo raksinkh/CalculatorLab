@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,37 +6,37 @@ using System.Threading.Tasks;
 
 namespace CPE200Lab1
 {
-    class RPNCalculatorEngine : CalculatorEngine
+    public class RPNCalculatorEngine : CalculatorEngine
     {
-           public string Process(string str)
+        public new string Process(string str)
         {
-            int opcheck = 0;
-            int numcheck = 0;
-            string[] parts = str.Split(' ');
-            string result = null;
-            Stack NUM = new Stack();
-           
-            while (parts.Length > numcheck)
-            {
-                //int i = parts.Length;
+            Stack<string> rpnStack = new Stack<string>();
+            List<string> parts = str.Split(' ').ToList<string>();
+            string result;
+            string firstOperand, secondOperand;
 
-                if (isNumber(parts[numcheck]))
+            foreach (string token in parts)
+            {
+                if (isNumber(token))
                 {
-                    NUM.Push(parts[numcheck]);
+                    rpnStack.Push(token);
                 }
-                else if (isOperator(parts[numcheck]))
+                else if (isOperator(token))
                 {
-                    
-                    string s2 = NUM.Pop().ToString();
-                    string s1 = NUM.Pop().ToString();
-                    result = calculate(parts[numcheck], s1, s2);
-                    NUM.Push(result);
+                    //FIXME, what if there is only one left in stack?
+                    secondOperand = rpnStack.Pop();
+                    firstOperand = rpnStack.Pop();
+                    result = calculate(token, firstOperand, secondOperand, 4);
+                    if (result is "E")
+                    {
+                        return result;
+                    }
+                    rpnStack.Push(result);
                 }
-                    numcheck++;
             }
-            numcheck = 0;
-            opcheck = 0;
-            return NUM.Pop().ToString();
+            //FIXME, what if there is more than one, or zero, items in the stack?
+            result = rpnStack.Pop();
+            return result;
         }
     }
 }
