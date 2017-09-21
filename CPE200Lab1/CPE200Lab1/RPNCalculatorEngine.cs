@@ -16,15 +16,21 @@ namespace CPE200Lab1
             string result;
             string firstOperand, secondOperand;
 
+            if (parts[0] == "x" || parts[0] == "/" || parts[0] == "-" || parts[0] == "+")
+            {
+                return "E";
+            }
+
             foreach (string token in parts)
             {
                 if (isNumber(token))
                 {
                     rpnStack.Push(token);
+                    
                 }
                 else if (isOperator(token))
                 {
-                    //FIXME, what if there is only one left in stack?
+                    
                                            
              
                     secondOperand = rpnStack.Pop();

@@ -25,7 +25,7 @@ namespace CPE200Lab1
             }
             return false;
         }
-
+        
         public string Process(string str)
         {
             //Split input string to multiple parts by space
@@ -50,6 +50,7 @@ namespace CPE200Lab1
             }
             return parts[0];
         }
+        
         public string unaryCalculate(string operate, string operand, int maxOutputSize = 8)
         {
             switch (operate)
