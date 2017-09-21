@@ -14,6 +14,22 @@ namespace CPE200Lab1
             return Double.TryParse(str, out retNum);
         }
 
+        protected bool isOver9000(string str)
+        {
+            if (str.Length > 1) { return true; }
+            /*
+            switch (str)
+            {   
+                case "+1":
+                case "1+":
+                case "++":
+
+                    return true;
+            }
+            */
+            return false;
+            
+        }
         protected bool isOperator(string str)
         {
             switch(str) {

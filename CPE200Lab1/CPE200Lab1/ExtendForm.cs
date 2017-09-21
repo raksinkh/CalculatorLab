@@ -60,6 +60,10 @@ namespace CPE200Lab1
             {
                 return;
             }
+            if(lblDisplay.Text == "0") { lblDisplay.Text = ((Button)sender).Text + " "; } else { 
+            lblDisplay.Text += " " + ((Button)sender).Text + " ";
+            }
+            /*
             isNumberPart = false;
             isContainDot = false;
             string current = lblDisplay.Text;
@@ -70,6 +74,8 @@ namespace CPE200Lab1
                 lblDisplay.Text += " " + ((Button)sender).Text + " ";
                 isSpaceAllowed = false;
             } else lblDisplay.Text += " " + ((Button)sender).Text + " ";
+            */
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
