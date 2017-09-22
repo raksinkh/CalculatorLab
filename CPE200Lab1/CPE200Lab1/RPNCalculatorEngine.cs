@@ -17,9 +17,9 @@ namespace CPE200Lab1
             List<string> parts = str.Split(' ').ToList<string>();
             string result;
             string firstOperand, secondOperand;
-            
 
-            if (parts[0] == "x" || parts[0] == "/" || parts[0] == "-" || parts[0] == "+" )
+
+            if (parts[0] == "x" || parts[0] == "/" || parts[0] == "-" || parts[0] == "+")
             {
                 return "E";
             }
@@ -29,14 +29,14 @@ namespace CPE200Lab1
                 if (isNumber(token))
                 {
                     rpnStack.Push(token);
-                   // numcheck++;
-                    
+                    // numcheck++;
+
                 }
                 else if (isOperator(token))
                 {
                     //if (numcheck > 0) { return "E"; }
                     if (rpnStack.Count <= 1) { return "E"; }
-                        opcheck++;
+                    opcheck++;
                     secondOperand = rpnStack.Pop();
                     firstOperand = rpnStack.Pop();
                     result = calculate(token, firstOperand, secondOperand, 4);
@@ -47,14 +47,15 @@ namespace CPE200Lab1
                     }
 
                     rpnStack.Push(result);
-                } else if(isOver9000(token)) { return "E"; }
+                }
+                else if (isOver9000(token)) { return "E"; }
             }
             //FIXME, what if there is more than one, or zero, items in the stack?
             //if (numcheck > 0) { return "E"; }
-            if (rpnStack.Count == 0 || rpnStack.Count > 1) { return "E";}
+            if (rpnStack.Count == 0 || rpnStack.Count > 1) { return "E"; }
             result = rpnStack.Pop();
-            if (result == "0" ) { return result; } else if (opcheck == 0) { return "E"; }
-          
+            if (result == "0") { return result; } else if (opcheck == 0) { return "E"; }
+
             //if (numcheck + 1 == opcheck) { return "E"; }
 
             return result;

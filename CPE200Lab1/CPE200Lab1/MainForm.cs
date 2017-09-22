@@ -173,10 +173,7 @@ namespace CPE200Lab1
             {
                 return;
             }
-            if (isAfterEqual)
-            {
-                resetAll();
-            }
+            HAhaha();
             if (lblDisplay.Text.Length is 8)
             {
                 return;
@@ -185,6 +182,14 @@ namespace CPE200Lab1
             {
                 lblDisplay.Text += ".";
                 hasDot = true;
+            }
+        }
+
+        private void HAhaha()
+        {
+            if (isAfterEqual)
+            {
+                resetAll();
             }
         }
 
