@@ -8,7 +8,7 @@ namespace CPE200Lab1
 {
     public class RPNCalculatorEngine : CalculatorEngine
     {
-        int numcheck;
+        //int numcheck;
         int opcheck;
         public new string Process(string str)
         {
@@ -19,7 +19,7 @@ namespace CPE200Lab1
             string firstOperand, secondOperand;
             
 
-            if (parts[0] == "x" || parts[0] == "/" || parts[0] == "-" || parts[0] == "+")
+            if (parts[0] == "x" || parts[0] == "/" || parts[0] == "-" || parts[0] == "+" )
             {
                 return "E";
             }
@@ -52,12 +52,11 @@ namespace CPE200Lab1
             //FIXME, what if there is more than one, or zero, items in the stack?
             //if (numcheck > 0) { return "E"; }
             if (rpnStack.Count == 0 || rpnStack.Count > 1) { return "E";}
-                result = rpnStack.Pop();
-            if (result == "0" ) { return result; } else { 
-            if (opcheck == 0) { return "E"; }
-            }
+            result = rpnStack.Pop();
+            if (result == "0" ) { return result; } else if (opcheck == 0) { return "E"; }
+          
             //if (numcheck + 1 == opcheck) { return "E"; }
-            
+
             return result;
         }
     }
